@@ -1,0 +1,90 @@
+{
+    "hero": {
+        "title": "Discover Your Scene",
+        "subtitle": "Real-time insights into the best venues and events in your city. Know before you go."
+    },
+    "features": [
+        {
+            "number": "01",
+            "title": "Live Updates",
+            "description": "Get real-time crowd levels, wait times, and atmosphere ratings from venues across the city."
+        },
+        {
+            "number": "02",
+            "title": "Smart Recommendations",
+            "description": "Personalized suggestions based on your preferences, past visits, and current venue status."
+        },
+        {
+            "number": "03",
+            "title": "Event Discovery",
+            "description": "Find upcoming events, special nights, and promotions at your favorite venues."
+        },
+        {
+            "number": "04",
+            "title": "Social Planning",
+            "description": "Connect with friends, share plans, and coordinate your night out effortlessly."
+        }
+    ],
+    "venues": [
+        {
+            "name": "The Loft",
+            "status": "Live Now",
+            "crowdLevel": "70%",
+            "waitTime": "10 min",
+            "description": "Rooftop lounge with cityscape views"
+        },
+        {
+            "name": "Basement",
+            "status": "Opening Soon",
+            "crowdLevel": "--",
+            "waitTime": "--",
+            "description": "Underground electronic music venue"
+        },
+        {
+            "name": "The Grove",
+            "status": "Live Now",
+            "crowdLevel": "45%",
+            "waitTime": "None",
+            "description": "Garden bar with live acoustic sets"
+        }
+    ],
+    "events": [
+        {
+            "date": {
+                "day": "15",
+                "month": "MAR"
+            },
+            "title": "Jazz Night",
+            "venue": "The Loft",
+            "time": "8:00 PM - Late"
+        },
+        {
+            "date": {
+                "day": "18",
+                "month": "MAR"
+            },
+            "title": "House Sessions",
+            "venue": "Basement",
+            "time": "10:00 PM - 4:00 AM"
+        },
+        {
+            "date": {
+                "day": "20",
+                "month": "MAR"
+            },
+            "title": "Acoustic Evening",
+            "venue": "The Grove",
+            "time": "7:00 PM - 11:00 PM"
+        }
+    ],
+    "contact": {
+        "email": "hello@thescene.com",
+        "phone": "(555) 123-4567",
+        "hours": "Mon-Fri, 9AM-6PM EST"
+    },
+    "social": {
+        "instagram": "#",
+        "twitter": "#",
+        "linkedin": "#"
+    }
+} 
