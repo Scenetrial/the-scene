@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Scene</title>
+    <title>The Scene - Coming Soon</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,10 +32,10 @@
     <header id="home">
         <div class="container">
             <div class="hero-content">
-                <h1>Discover Your Scene</h1>
-                <p class="hero-text">Real-time insights into the best venues and events in your city. Know before you go.</p>
+                <h1>Coming Soon to the App Store</h1>
+                <p class="hero-text">Get ready to discover your city's best venues and events. The Scene app will be available on the App Store soon.</p>
                 <div class="cta-buttons">
-                    <a href="#download" class="primary-btn">Download App</a>
+                    <a href="#notify" class="primary-btn">Notify Me</a>
                     <a href="#learn" class="secondary-btn">Learn More</a>
                 </div>
             </div>
@@ -75,16 +75,16 @@
             <h2>Featured Venues</h2>
             <div class="venue-slider">
                 <div class="venue-card">
-                    <div class="venue-status active">Live Now</div>
+                    <div class="venue-status coming-soon">Coming Soon</div>
                     <h3>The Loft</h3>
                     <div class="venue-details">
-                        <span class="crowd-level">Crowd: 70%</span>
-                        <span class="wait-time">Wait: 10 min</span>
+                        <span class="crowd-level">Crowd: --</span>
+                        <span class="wait-time">Wait: --</span>
                     </div>
                     <p>Rooftop lounge with cityscape views</p>
                 </div>
                 <div class="venue-card">
-                    <div class="venue-status">Opening Soon</div>
+                    <div class="venue-status coming-soon">Coming Soon</div>
                     <h3>Basement</h3>
                     <div class="venue-details">
                         <span class="crowd-level">Crowd: --</span>
@@ -93,11 +93,11 @@
                     <p>Underground electronic music venue</p>
                 </div>
                 <div class="venue-card">
-                    <div class="venue-status active">Live Now</div>
+                    <div class="venue-status coming-soon">Coming Soon</div>
                     <h3>The Grove</h3>
                     <div class="venue-details">
-                        <span class="crowd-level">Crowd: 45%</span>
-                        <span class="wait-time">Wait: None</span>
+                        <span class="crowd-level">Crowd: --</span>
+                        <span class="wait-time">Wait: --</span>
                     </div>
                     <p>Garden bar with live acoustic sets</p>
                 </div>
@@ -146,15 +146,17 @@
         </div>
     </section>
 
-    <section id="download" class="download-section">
+    <section id="notify" class="download-section">
         <div class="container">
             <div class="download-content">
-                <h2>Get Started Today</h2>
-                <p>Download The Scene app and never miss out on the best nights.</p>
-                <div class="store-buttons">
-                    <a href="#" class="store-btn">App Store</a>
-                    <a href="#" class="store-btn">Google Play</a>
-                </div>
+                <h2>Be the First to Know</h2>
+                <p>Sign up to get notified when The Scene app launches on the App Store.</p>
+                <form class="notify-form" action="https://formspree.io/f/xpzvjvjv" method="POST">
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <input type="hidden" name="_subject" value="New Scene App Notification Signup">
+                    <input type="hidden" name="_next" value="https://scenetrial.github.io/the-scene/thank-you.html">
+                    <button type="submit" class="primary-btn">Notify Me</button>
+                </form>
             </div>
         </div>
     </section>
@@ -167,8 +169,7 @@
                     <h3>Contact Information</h3>
                     <p>For business inquiries or support:</p>
                     <ul class="contact-list">
-                        <li>Email: hello@thescene.com</li>
-                        <li>Phone: (555) 123-4567</li>
+                        <li>Email: info@thescenehub.com</li>
                         <li>Hours: Mon-Fri, 9AM-6PM EST</li>
                     </ul>
                 </div>
@@ -209,7 +210,7 @@
                         <li><a href="#features">Features</a></li>
                         <li><a href="#venues">Venues</a></li>
                         <li><a href="#events">Events</a></li>
-                        <li><a href="#download">Download</a></li>
+                        <li><a href="#notify">Notify Me</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">

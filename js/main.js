@@ -71,4 +71,30 @@ function updateContent(data) {
 }
 
 // Load content when page loads
-document.addEventListener('DOMContentLoaded', loadContent); 
+document.addEventListener('DOMContentLoaded', loadContent);
+
+// Handle notification form submission
+document.querySelector('.notify-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const email = this.querySelector('input[type="email"]').value;
+    
+    try {
+        const response = await fetch('https://api.thescenehub.com/notify', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email })
+        });
+
+        if (response.ok) {
+            alert('Thank you! We\'ll notify you when The Scene app launches.');
+            this.reset();
+        } else {
+            alert('Something went wrong. Please try again later.');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Something went wrong. Please try again later.');
+    }
+}); 

@@ -216,6 +216,17 @@ h2 {
     color: var(--primary-color);
 }
 
+.venue-status.coming-soon {
+    background-color: #FFA500;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
 .venue-details {
     display: flex;
     gap: 1rem;
@@ -446,4 +457,82 @@ footer {
     .social-links {
         justify-content: center;
     }
+
+    .notify-form {
+        flex-direction: column;
+    }
+    
+    .notify-form button {
+        width: 100%;
+    }
+}
+
+.notify-form {
+    display: flex;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 2rem auto;
+}
+
+.notify-form input {
+    flex: 1;
+    padding: 1rem;
+    border: 2px solid #6B5B4E;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: transparent;
+    color: #F5F5DC;
+}
+
+.notify-form input::placeholder {
+    color: #8B7355;
+}
+
+.notify-form input:focus {
+    outline: none;
+    border-color: #FFE0A3;
+}
+
+.notify-form button {
+    padding: 1rem 2rem;
+    background-color: #FFE0A3;
+    color: #6B5B4E;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.notify-form button:hover {
+    background-color: #FFD700;
+    transform: translateY(-2px);
+}
+
+.thank-you-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.thank-you-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.thank-you-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #F5F5DC;
+}
+
+.thank-you-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #F5F5DC;
 } 
