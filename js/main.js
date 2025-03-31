@@ -1,7 +1,7 @@
 // Function to load content from JSON
 async function loadContent() {
     try {
-        const response = await fetch('../data/content.json');
+        const response = await fetch('./data/content.json');
         const data = await response.json();
         updateContent(data);
     } catch (error) {

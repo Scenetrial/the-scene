@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background circle with gradient -->
+    <defs>
+        <radialGradient id="appGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop offset="0%" style="stop-color:#8B7355;stop-opacity:1"/>
+            <stop offset="100%" style="stop-color:#6B5B4E;stop-opacity:1"/>
+        </radialGradient>
+    </defs>
+    
+    <!-- Main background circle -->
+    <circle cx="512" cy="512" r="512" fill="url(#appGradient)"/>
+    
+    <!-- Dancing figures group -->
+    <g transform="translate(512, 512)">
+        <!-- Figure 1 -->
+        <g transform="translate(-200, 200)">
+            <circle class="light" cx="0" cy="-40" r="12" fill="#FFE0A3"/>
+            <path d="M-15,-30 C-20,-20 20,-20 15,-30 L0,-50 Z" fill="#F5F5DC"/>
+            <circle cx="0" cy="-55" r="10" fill="#F5F5DC"/>
+            <path d="M-20,-10 Q0,-25 20,-10" stroke="#F5F5DC" fill="none" stroke-width="4"/>
+        </g>
+        
+        <!-- Figure 2 -->
+        <g transform="translate(0, 220)">
+            <circle class="light" cx="0" cy="-40" r="12" fill="#FFE0A3"/>
+            <path d="M-15,-30 C-20,-20 20,-20 15,-30 L0,-50 Z" fill="#F5F5DC"/>
+            <circle cx="0" cy="-55" r="10" fill="#F5F5DC"/>
+            <path d="M-20,-10 Q0,-25 20,-10" stroke="#F5F5DC" fill="none" stroke-width="4"/>
+        </g>
+        
+        <!-- Figure 3 -->
+        <g transform="translate(200, 200)">
+            <circle class="light" cx="0" cy="-40" r="12" fill="#FFE0A3"/>
+            <path d="M-15,-30 C-20,-20 20,-20 15,-30 L0,-50 Z" fill="#F5F5DC"/>
+            <circle cx="0" cy="-55" r="10" fill="#F5F5DC"/>
+            <path d="M-20,-10 Q0,-25 20,-10" stroke="#F5F5DC" fill="none" stroke-width="4"/>
+        </g>
+    </g>
+    
+    <!-- Light beams -->
+    <g>
+        <path d="M312,512 L512,512" stroke="#FFE0A3" stroke-width="4" opacity="0.3"/>
+        <path d="M512,532 L512,512" stroke="#FFE0A3" stroke-width="4" opacity="0.3"/>
+        <path d="M712,512 L512,512" stroke="#FFE0A3" stroke-width="4" opacity="0.3"/>
+    </g>
+    
+    <!-- Stylized "S" in the center -->
+    <path d="M612,406 C612,369 586,340 552,340 C518,340 492,369 492,406 C492,443 518,472 552,472 C586,472 612,501 612,538 C612,575 586,604 552,604 C518,604 492,575 492,538" 
+          stroke="#F5F5DC" 
+          fill="none" 
+          stroke-width="48"
+          stroke-linecap="round"/>
+    
+    <!-- Shine effect -->
+    <circle cx="512" cy="512" r="400" fill="none" stroke="url(#appGradient)" stroke-width="8">
+        <animateTransform attributeName="transform"
+                          attributeType="XML"
+                          type="rotate"
+                          from="0 512 512"
+                          to="360 512 512"
+                          dur="20s"
+                          repeatCount="indefinite"/>
+    </circle>
+</svg> 
