@@ -97,4 +97,36 @@ document.querySelector('.notify-form').addEventListener('submit', async function
         console.error('Error:', error);
         alert('Something went wrong. Please try again later.');
     }
-}); 
+});
+
+async function handleFormSubmit(event) {
+    event.preventDefault();
+    const form = event.target;
+    const messageDiv = form.querySelector('.form-message');
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.textContent;
+
+    try {
+        submitButton.textContent = 'Sending...';
+        messageDiv.style.display = 'none';
+        
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        
+        if (response.ok) {
+            window.location.href = form.querySelector('input[name="_next"]').value;
+        } else {
+            throw new Error('Form submission failed');
+        }
+    } catch (error) {
+        messageDiv.textContent = 'Something went wrong. Please try again or contact us at info@thescenehub.com';
+        messageDiv.style.display = 'block';
+        submitButton.textContent = originalButtonText;
+    }
+    return false;
+} 
