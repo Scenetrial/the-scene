@@ -58,7 +58,6 @@ function updateContent(data) {
     // Update contact information
     document.querySelector('.contact-list').innerHTML = `
         <li>Email: ${data.contact.email}</li>
-        <li>Phone: ${data.contact.phone}</li>
         <li>Hours: ${data.contact.hours}</li>
     `;
 
