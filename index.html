@@ -239,12 +239,12 @@
 
     <!-- Cookie Consent Banner -->
     <div class="cookie-banner" id="cookieBanner">
-        <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. 
+        <p>We use cookies to enhance your experience. 
            <a href="cookie-policy.html" style="color: #4CAF50;">Learn more</a>
         </p>
         <div class="cookie-buttons">
-            <button class="settings-btn" onclick="window.location.href='cookie-policy.html'">Cookie Settings</button>
-            <button class="accept-btn" onclick="acceptCookies()">Accept All</button>
+            <button class="accept-btn" onclick="acceptCookies()">Accept</button>
+            <button class="settings-btn" onclick="window.location.href='cookie-policy.html'">Settings</button>
         </div>
     </div>
 
@@ -271,14 +271,24 @@
 
         function acceptCookies() {
             setCookie('cookie_consent', 'accepted', 365);
-            document.getElementById('cookieBanner').classList.remove('show');
+            const banner = document.getElementById('cookieBanner');
+            banner.classList.remove('show');
+            // Add a small delay before hiding the banner completely
+            setTimeout(() => {
+                banner.style.display = 'none';
+            }, 300);
         }
 
         // Show banner if consent not given
         window.addEventListener('load', function() {
             if (!getCookie('cookie_consent')) {
                 setTimeout(function() {
-                    document.getElementById('cookieBanner').classList.add('show');
+                    const banner = document.getElementById('cookieBanner');
+                    banner.style.display = 'block';
+                    // Small delay to ensure display is set before adding show class
+                    setTimeout(() => {
+                        banner.classList.add('show');
+                    }, 10);
                 }, 1000);
             }
         });

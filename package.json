@@ -1,7 +1,7 @@
 {
-  "name": "the-scene-backend",
+  "name": "the-scene",
   "version": "1.0.0",
-  "description": "Backend for The Scene website",
+  "description": "The Scene - Event Discovery Platform",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -11,6 +11,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "mongoose": "^7.0.3",
     "nodemailer": "^6.9.1"
   },
   "devDependencies": {

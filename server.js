@@ -1,57 +1,85 @@
 const express = require('express');
-const nodemailer = require('nodemailer');
+const mongoose = require('mongoose');
 const cors = require('cors');
-require('dotenv').config();
+const config = require('./api/config');
 
 const app = express();
+
+// Middleware
 app.use(cors());
 app.use(express.json());
 
-// Create email transporter
-const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS
+// Connect to MongoDB
+mongoose.connect(config.database.url, config.database.options)
+    .then(() => console.log('Connected to MongoDB'))
+    .catch(err => console.error('MongoDB connection error:', err));
+
+// Models
+const Event = require('./models/Event');
+const Venue = require('./models/Venue');
+const User = require('./models/User');
+
+// API Routes
+app.get(config.endpoints.events, async (req, res) => {
+    try {
+        const events = await Event.find().sort({ date: 1 });
+        res.json(events);
+    } catch (error) {
+        res.status(500).json({ error: 'Error fetching events' });
     }
 });
 
-// Handle notification requests
-app.post('/notify', async (req, res) => {
-    const { email } = req.body;
-    
+app.get(config.endpoints.venues, async (req, res) => {
     try {
-        // Send confirmation email to subscriber
-        await transporter.sendMail({
-            from: process.env.EMAIL_USER,
-            to: email,
-            subject: 'Welcome to The Scene - Coming Soon!',
-            html: `
-                <h1>Welcome to The Scene!</h1>
-                <p>Thank you for signing up to be notified when The Scene app launches.</p>
-                <p>We'll keep you updated on our progress and let you know as soon as the app is available on the App Store.</p>
-                <br>
-                <p>Best regards,</p>
-                <p>The Scene Team</p>
-            `
-        });
-
-        // Send notification to admin
-        await transporter.sendMail({
-            from: process.env.EMAIL_USER,
-            to: 'info@thescenehub.com',
-            subject: 'New Subscriber Alert',
-            html: `
-                <h2>New Subscriber</h2>
-                <p>Email: ${email}</p>
-                <p>Time: ${new Date().toLocaleString()}</p>
-            `
-        });
-
-        res.status(200).json({ message: 'Notification sent successfully' });
+        const venues = await Venue.find();
+        res.json(venues);
     } catch (error) {
-        console.error('Error sending email:', error);
-        res.status(500).json({ error: 'Failed to send notification' });
+        res.status(500).json({ error: 'Error fetching venues' });
+    }
+});
+
+// Webhook endpoints for app updates
+app.post(config.webhooks.eventUpdate, async (req, res) => {
+    try {
+        const { eventId, action, data } = req.body;
+        
+        switch (action) {
+            case 'create':
+                await Event.create(data);
+                break;
+            case 'update':
+                await Event.findByIdAndUpdate(eventId, data);
+                break;
+            case 'delete':
+                await Event.findByIdAndDelete(eventId);
+                break;
+        }
+        
+        res.json({ success: true });
+    } catch (error) {
+        res.status(500).json({ error: 'Error processing event update' });
+    }
+});
+
+app.post(config.webhooks.venueUpdate, async (req, res) => {
+    try {
+        const { venueId, action, data } = req.body;
+        
+        switch (action) {
+            case 'create':
+                await Venue.create(data);
+                break;
+            case 'update':
+                await Venue.findByIdAndUpdate(venueId, data);
+                break;
+            case 'delete':
+                await Venue.findByIdAndDelete(venueId);
+                break;
+        }
+        
+        res.json({ success: true });
+    } catch (error) {
+        res.status(500).json({ error: 'Error processing venue update' });
     }
 });
 
