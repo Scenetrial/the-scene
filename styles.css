@@ -319,14 +319,11 @@ body {
 .download-section {
     padding: 6rem 0;
     position: relative;
-    background: 
-        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-        url('IMG_0956.JPG') 0% 0% / 33% 50% no-repeat,
-        url('IMG_0957.JPG') 33% 0% / 33% 50% no-repeat,
-        url('IMG_0958.JPG') 66% 0% / 34% 50% no-repeat,
-        url('IMG_0959.JPG') 0% 50% / 33% 50% no-repeat,
-        url('IMG_0960.JPG') 33% 50% / 33% 50% no-repeat,
-        url('IMG_0961.JPG') 66% 50% / 34% 50% no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+                url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2070');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -340,11 +337,9 @@ body {
     right: 0;
     bottom: 0;
     background: 
-        radial-gradient(circle at 20% 30%, rgba(255, 0, 0, 0.3), transparent 50%),
-        radial-gradient(circle at 80% 30%, rgba(255, 0, 255, 0.3), transparent 50%),
-        radial-gradient(circle at 50% 60%, rgba(255, 0, 0, 0.3), transparent 60%),
-        radial-gradient(circle at 20% 80%, rgba(255, 0, 255, 0.3), transparent 40%),
-        radial-gradient(circle at 80% 80%, rgba(255, 0, 0, 0.3), transparent 50%);
+        radial-gradient(circle at 20% 50%, rgba(255, 0, 0, 0.2), transparent 70%),
+        radial-gradient(circle at 80% 50%, rgba(255, 0, 255, 0.2), transparent 70%),
+        radial-gradient(circle at 50% 50%, rgba(255, 0, 0, 0.15), transparent 60%);
     pointer-events: none;
     mix-blend-mode: screen;
     animation: lightPulse 8s ease-in-out infinite;
