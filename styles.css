@@ -319,11 +319,11 @@ body {
 .download-section {
     padding: 6rem 0;
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-                url('https://i.ytimg.com/vi/IsHPx6kon5w/maxresdefault.jpg') center,
-                url('https://i.ytimg.com/vi/h6wz8TXxb1c/maxresdefault.jpg') bottom right;
-    background-size: cover, cover, cover;
-    background-position: center, center, center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+                url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=2000') center,
+                url('https://images.unsplash.com/photo-1459749411175-04bf5292ceea?q=80&w=2000') bottom right;
+    background-size: cover;
+    background-position: center;
     background-blend-mode: overlay;
     text-align: center;
     position: relative;
@@ -338,9 +338,9 @@ body {
     right: 0;
     bottom: 0;
     background: 
-        radial-gradient(circle at 20% 50%, rgba(255, 0, 0, 0.15), transparent 70%),
-        radial-gradient(circle at 80% 50%, rgba(0, 255, 255, 0.15), transparent 70%),
-        radial-gradient(circle at 50% 50%, rgba(255, 0, 255, 0.1), transparent 60%);
+        radial-gradient(circle at 20% 50%, rgba(255, 0, 0, 0.2), transparent 70%),
+        radial-gradient(circle at 80% 50%, rgba(255, 0, 255, 0.2), transparent 70%),
+        radial-gradient(circle at 50% 50%, rgba(255, 0, 0, 0.15), transparent 60%);
     pointer-events: none;
     mix-blend-mode: screen;
     animation: lightPulse 8s ease-in-out infinite;
@@ -376,11 +376,11 @@ body {
     z-index: 2;
     padding: 2.5rem;
     border-radius: 20px;
-    background: rgba(20, 20, 20, 0.8);
+    background: rgba(20, 20, 20, 0.85);
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5),
-                0 0 20px rgba(255, 0, 0, 0.2),
-                0 0 40px rgba(0, 255, 255, 0.2);
+                0 0 20px rgba(255, 0, 0, 0.3),
+                0 0 40px rgba(255, 0, 255, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
     animation: glowPulse 4s ease-in-out infinite;
 }
@@ -388,18 +388,18 @@ body {
 @keyframes glowPulse {
     0% {
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5),
-                    0 0 20px rgba(255, 0, 0, 0.2),
-                    0 0 40px rgba(0, 255, 255, 0.2);
+                    0 0 20px rgba(255, 0, 0, 0.3),
+                    0 0 40px rgba(255, 0, 255, 0.3);
     }
     50% {
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5),
-                    0 0 30px rgba(255, 0, 0, 0.4),
-                    0 0 60px rgba(0, 255, 255, 0.4);
+                    0 0 30px rgba(255, 0, 0, 0.5),
+                    0 0 60px rgba(255, 0, 255, 0.5);
     }
     100% {
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5),
-                    0 0 20px rgba(255, 0, 0, 0.2),
-                    0 0 40px rgba(0, 255, 255, 0.2);
+                    0 0 20px rgba(255, 0, 0, 0.3),
+                    0 0 40px rgba(255, 0, 255, 0.3);
     }
 }
 
@@ -418,7 +418,7 @@ body {
 }
 
 .notify-form {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.4);
     padding: 2rem;
     border-radius: 12px;
     backdrop-filter: blur(5px);
@@ -444,6 +444,7 @@ body {
     background: rgba(0, 0, 0, 0.4);
     border-color: rgba(255, 255, 255, 0.4);
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    outline: none;
 }
 
 .notify-form input::placeholder {
@@ -452,7 +453,7 @@ body {
 
 .notify-form button {
     padding: 1rem 2rem;
-    background: linear-gradient(45deg, #ff3366, #ff0033);
+    background: linear-gradient(45deg, #ff0033, #ff3366);
     color: white;
     border: none;
     border-radius: 8px;
@@ -467,7 +468,7 @@ body {
 .notify-form button:hover {
     transform: translateY(-2px);
     box-shadow: 0 0 20px rgba(255, 51, 102, 0.5);
-    background: linear-gradient(45deg, #ff0033, #ff3366);
+    background: linear-gradient(45deg, #ff3366, #ff0033);
 }
 
 /* Contact Section */
