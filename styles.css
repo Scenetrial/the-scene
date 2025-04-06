@@ -319,11 +319,13 @@ body {
 .download-section {
     padding: 6rem 0;
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
-                url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2070');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+                url('https://i.ytimg.com/vi/x5KmD6W_qqo/maxresdefault.jpg') center,
+                url('https://i.ytimg.com/vi/dFlDRhvM4L0/maxresdefault.jpg') bottom right,
+                url('https://i.ytimg.com/vi/bk6Xst6euQk/maxresdefault.jpg') top left;
+    background-size: cover, cover, cover;
+    background-position: center, center, center;
+    background-blend-mode: overlay;
     text-align: center;
     position: relative;
     overflow: hidden;
