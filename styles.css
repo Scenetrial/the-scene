@@ -768,8 +768,17 @@ footer {
     pointer-events: none;
 }
 
-.iphone-frame:hover {
-    transform: rotateY(-5deg);
+.iphone-frame::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    z-index: 3;
+    pointer-events: none;
 }
 
 .iphone-notch {
@@ -783,6 +792,18 @@ footer {
     border-radius: 35px;
     z-index: 2;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.iphone-notch::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 25px;
+    background: #000;
+    border-radius: 25px;
 }
 
 .iphone-screen {
