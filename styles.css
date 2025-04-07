@@ -797,6 +797,7 @@ footer {
     align-items: center;
     justify-content: space-between;
     padding: 0 15px;
+    backdrop-filter: blur(10px);
 }
 
 .iphone-notch::before {
@@ -932,11 +933,19 @@ footer {
 .app-header {
     padding: 0.5rem 0;
     margin-bottom: 1rem;
-    background: rgba(0, 0, 0, 0.8);
+    background: linear-gradient(to bottom, 
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0.8) 20%,
+        rgba(0, 0, 0, 0.6) 50%,
+        rgba(0, 0, 0, 0.4) 100%
+    );
     backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
     z-index: 10;
+    border-radius: 35px 35px 0 0;
+    margin-top: -35px;
+    padding-top: 35px;
 }
 
 .app-nav {
@@ -946,6 +955,7 @@ footer {
     padding: 0.5rem;
     border-radius: 10px;
     margin: 0 1rem;
+    backdrop-filter: blur(5px);
 }
 
 .nav-item {
@@ -975,6 +985,7 @@ footer {
     padding: 0.75rem 1rem;
     border-radius: 10px;
     margin: 0.5rem 1rem;
+    backdrop-filter: blur(5px);
 }
 
 .search-bar i {
@@ -1000,6 +1011,8 @@ footer {
     gap: 1rem;
     padding: 0 1rem;
     margin-top: -20px;
+    position: relative;
+    z-index: 1;
 }
 
 .event-card {
