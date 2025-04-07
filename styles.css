@@ -1067,68 +1067,24 @@ footer {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
     overflow: hidden;
-}
-
-.event-image {
-    height: 150px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-.event-status {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    display: flex;
-    gap: 0.5rem;
-}
-
-.status-badge {
-    background: var(--accent-color);
-    color: var(--primary-color);
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    font-weight: 500;
-}
-
-.rating {
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    font-weight: 500;
+    padding: 1rem;
 }
 
 .event-info {
-    padding: 1rem;
+    padding: 0;
 }
 
 .event-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .event-header h4 {
     color: white;
     font-size: 1rem;
     margin: 0;
-}
-
-.bookmark-btn {
-    background: none;
-    border: none;
-    color: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.bookmark-btn:hover {
-    color: var(--accent-color);
 }
 
 .event-date, .event-location {
@@ -1140,7 +1096,8 @@ footer {
 .event-tags {
     display: flex;
     gap: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
 }
 
 .tag {
@@ -1160,6 +1117,18 @@ footer {
 
 .event-stats i {
     margin-right: 0.25rem;
+}
+
+.bookmark-btn {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.bookmark-btn:hover {
+    color: var(--accent-color);
 }
 
 .bottom-nav {
