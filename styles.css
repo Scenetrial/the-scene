@@ -996,6 +996,7 @@ footer {
     backdrop-filter: blur(10px);
     z-index: 10;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    transform: translateY(0);
 }
 
 .app-nav {
@@ -1059,6 +1060,7 @@ footer {
     gap: 1rem;
     padding: 1rem;
     padding-bottom: 80px;
+    margin-bottom: 60px;
 }
 
 .event-card {
