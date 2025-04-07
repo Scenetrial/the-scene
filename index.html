@@ -93,18 +93,40 @@
                     <div class="iphone-notch"></div>
                     <div class="iphone-screen">
                         <header class="app-header">
-                            <nav class="app-nav">
-                                <div class="nav-item active">Discover</div>
-                                <div class="nav-item">DJs</div>
-                                <div class="nav-item">Squad</div>
-                            </nav>
+                            <div class="app-nav">
+                                <div class="nav-item active">
+                                    <i class="fas fa-compass"></i>
+                                    <span>Discover</span>
+                                </div>
+                                <div class="nav-item">
+                                    <i class="fas fa-music"></i>
+                                    <span>DJs</span>
+                                </div>
+                                <div class="nav-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>Squad</span>
+                                </div>
+                            </div>
                         </header>
                         
                         <main class="app-content">
+                            <div class="search-bar">
+                                <i class="fas fa-search"></i>
+                                <input type="text" placeholder="Search venues, DJs, events...">
+                            </div>
+                            
                             <div class="event-card">
-                                <div class="event-image"></div>
+                                <div class="event-image" style="background-image: url('images/venue1.jpg');">
+                                    <div class="event-status">
+                                        <span class="status-badge">Live Now</span>
+                                        <span class="rating">4.8</span>
+                                    </div>
+                                </div>
                                 <div class="event-info">
-                                    <h4>Friday Night Live</h4>
+                                    <div class="event-header">
+                                        <h4>Friday Night Live</h4>
+                                        <button class="bookmark-btn"><i class="fas fa-bookmark"></i></button>
+                                    </div>
                                     <p class="event-date">Tonight, 10PM</p>
                                     <p class="event-location">Club XYZ</p>
                                     <div class="event-tags">
@@ -112,19 +134,35 @@
                                         <span class="tag">Live</span>
                                         <span class="tag">4.8/5</span>
                                     </div>
+                                    <div class="event-stats">
+                                        <span><i class="fas fa-users"></i> 245 people</span>
+                                        <span><i class="fas fa-clock"></i> 15 min wait</span>
+                                    </div>
                                 </div>
                             </div>
                             
                             <div class="event-card">
-                                <div class="event-image"></div>
+                                <div class="event-image" style="background-image: url('images/venue2.jpg');">
+                                    <div class="event-status">
+                                        <span class="status-badge">Featured</span>
+                                        <span class="rating">4.9</span>
+                                    </div>
+                                </div>
                                 <div class="event-info">
-                                    <h4>DJ Set: Sarah Smith</h4>
+                                    <div class="event-header">
+                                        <h4>DJ Set: Sarah Smith</h4>
+                                        <button class="bookmark-btn"><i class="fas fa-bookmark"></i></button>
+                                    </div>
                                     <p class="event-date">Tomorrow, 11PM</p>
                                     <p class="event-location">Venue ABC</p>
                                     <div class="event-tags">
                                         <span class="tag">Techno</span>
                                         <span class="tag">Featured</span>
                                         <span class="tag">4.9/5</span>
+                                    </div>
+                                    <div class="event-stats">
+                                        <span><i class="fas fa-users"></i> 189 people</span>
+                                        <span><i class="fas fa-clock"></i> 5 min wait</span>
                                     </div>
                                 </div>
                             </div>
