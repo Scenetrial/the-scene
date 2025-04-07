@@ -743,7 +743,7 @@ footer {
 
 .iphone-frame {
     width: 300px;
-    height: 650px;
+    height: 600px;
     background: #1a1a1a;
     border-radius: 40px;
     position: relative;
@@ -751,7 +751,6 @@ footer {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     transform: rotateY(-10deg);
     transition: transform 0.3s ease;
-    border: 12px solid #1a1a1a;
 }
 
 .iphone-frame::before {
@@ -776,17 +775,16 @@ footer {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 120px;
-    height: 25px;
+    width: 150px;
+    height: 30px;
     background: #1a1a1a;
-    border-radius: 0 0 15px 15px;
+    border-radius: 15px;
     z-index: 2;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .iphone-screen {
     position: absolute;
-    top: 25px;
+    top: 30px;
     left: 0;
     right: 0;
     bottom: 0;
