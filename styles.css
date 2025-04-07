@@ -861,6 +861,9 @@ footer {
     padding: 0;
     overflow-y: auto;
     border-radius: 50px;
+    transform: rotateY(10deg);
+    transform-origin: center;
+    backface-visibility: hidden;
 }
 
 .iphone-home-indicator {
@@ -946,6 +949,8 @@ footer {
     border-radius: 35px 35px 0 0;
     margin-top: -35px;
     padding-top: 35px;
+    transform: rotateY(10deg);
+    transform-origin: center;
 }
 
 .app-nav {
@@ -1013,6 +1018,8 @@ footer {
     margin-top: -20px;
     position: relative;
     z-index: 1;
+    transform: rotateY(10deg);
+    transform-origin: center;
 }
 
 .event-card {
@@ -1020,6 +1027,8 @@ footer {
     border-radius: 12px;
     overflow: hidden;
     margin-top: 0;
+    transform: rotateY(10deg);
+    transform-origin: center;
 }
 
 .event-image {
