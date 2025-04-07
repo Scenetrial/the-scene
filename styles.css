@@ -789,10 +789,14 @@ footer {
     transform: translateX(-50%);
     width: 120px;
     height: 35px;
-    background: #f5f5f7;
+    background: #000;
     border-radius: 35px;
     z-index: 2;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
 }
 
 .iphone-notch::before {
@@ -805,6 +809,45 @@ footer {
     height: 25px;
     background: #000;
     border-radius: 25px;
+    z-index: 1;
+}
+
+.iphone-notch::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.9) 100%);
+    border-radius: 35px;
+    z-index: 2;
+}
+
+.dynamic-island-indicators {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 3;
+}
+
+.dynamic-island-indicator {
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+}
+
+.dynamic-island-time {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.7rem;
+    font-weight: 500;
+    margin-right: 4px;
+    z-index: 3;
 }
 
 .iphone-screen {
